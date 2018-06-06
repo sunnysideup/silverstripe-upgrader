@@ -21,6 +21,14 @@ Make sure your `$HOME/.composer/vendor/bin` directory is in your PATH (or the eq
 Then you can run this script with `upgrade-code <command>` in your project root. If not running in the root,
 use --root-dir=/path.
 
+### Symphony packages install issues
+
+Usually the requirements for symfony packages are loose enough to allow ^3 or ^4. In my SS 4.2. installation I see that the silverstripe/serve module (for behat testing) requires ^3.
+
+You can run `composer why symfony/process` to see what requires it?
+
+Often you can explicitly require a newer version of Symfony packages then re-run your install command for packages like the upgrader, e.g. `composer require symfony/process ^4 && composer require-dev silverstripe/upgrader`
+
 ## Available commands
 
 The following commands are available:
