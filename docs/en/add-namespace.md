@@ -17,7 +17,7 @@ upgrade-code add-namespace "My\Namespace" ./mysite/code/SomeCode.php --write -vv
 * If you want to just do a dry-run, skip the `--write` and `--upgrade-spec` params.
 * If you have multiple namespace levels you can add the `--recursive` or `-r` param to also update those levels.
 
-This will namespace the class file SomeCode.php, and add the mapping to the `./.upgrader.yml` file in your project.
+This will namespace the class file SomeCode.php, and add the mapping to the `./.upgrade.yml` file in your project.
 
 Once you've added namespaces, you will need to run the `upgrade` task below to migrate code
 that referenced the un-namespaced versions of these classes.
